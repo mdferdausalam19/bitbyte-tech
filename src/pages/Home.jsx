@@ -1,11 +1,10 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-
+import Hero from "../components/Hero";
+import wave from "../assets/wave.svg";
 const Home = () => {
   return (
-    <div>
-      <Navbar></Navbar>
-      <h2>This is a home page.</h2>
+    <div className="flex relative flex-col items-center justify-center min-h-[calc(100vh-116px)] bg-base-200">
+      <Hero></Hero>
+      <img className="absolute bottom-0 w-full" src={wave} alt="" />
     </div>
   );
 };
