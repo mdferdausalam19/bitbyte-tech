@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const EmptyState = ({message, address, label}) => {
+const EmptyState = ({ message, address, label }) => {
   return (
     <div className="min-h-[calc(100vh-116px)] gap-5 flex flex-col justify-center items-center pb-16">
       <p className="text-2xl">{message}</p>
@@ -15,6 +16,12 @@ const EmptyState = ({message, address, label}) => {
       </Link>
     </div>
   );
-}
+};
 
-export default EmptyState
+EmptyState.propTypes = {
+  message: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+};
+
+export default EmptyState;

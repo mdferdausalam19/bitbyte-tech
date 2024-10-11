@@ -11,25 +11,23 @@ const Author = () => {
     website_url,
   } = blog.user;
   return (
-    <div className="flex flex-col justify-center  p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+    <div className="flex flex-col justify-center  p-6 shadow-md rounded-xl sm:px-12 border border-primary ">
       <img
         src={profile_image}
         alt=""
-        className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
+        className="w-32 h-32 mx-auto rounded-full aspect-square"
       />
-      <div className="space-y-4 text-center divide-y dark:divide-gray-300">
+      <div className="space-y-4 text-center divide-y">
         <div className="my-2 space-y-1">
           <h2 className="text-xl font-semibold sm:text-2xl">{name}</h2>
-          <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-            Username: {username}
-          </p>
+          <p className="px-5 text-xs sm:text-base">Username: {username}</p>
         </div>
         <div className="flex justify-center pt-2 space-x-4 align-center">
           <a
             target="_blank"
             href={`https://github.com/${github_username}`}
             aria-label="GitHub"
-            className="p-2 rounded-md dark:text-gray-800 "
+            className="p-2 rounded-md "
           >
             <svg
               viewBox="0 0 496 512"
@@ -41,9 +39,9 @@ const Author = () => {
           </a>
           <a
             target="_blank"
-            href={website_url || '#'}
+            href={website_url || "#"}
             aria-label="Dribble"
-            className="p-2 rounded-md dark:text-gray-800 "
+            className="p-2 rounded-md"
           >
             <svg
               viewBox="0 0 512 512"
@@ -57,7 +55,7 @@ const Author = () => {
             target="_blank"
             href={`https://twitter.com/${twitter_username}`}
             aria-label="Twitter"
-            className="p-2 rounded-md dark:text-gray-800 "
+            className="p-2 rounded-md"
           >
             <svg
               viewBox="0 0 512 512"

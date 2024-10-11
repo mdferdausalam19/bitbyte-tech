@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import placeholderImage from "../assets/404.jpg";
 import { MdDeleteForever } from "react-icons/md";
+import PropTypes from "prop-types";
 
 const BlogCard = ({ blog, deletable, handleDelete }) => {
   const { cover_image, title, description, published_at, id } = blog;
- 
+
   return (
     <div className="flex relative">
       <Link
         to={`/blog/${id}`}
-        className="max-w-sm mx-auto group hover:no-underline focus:no-underline transition border-2 hover:scale-105 border-primary hover:border-secondary border-opacity-30 rounded-md p-2"
+        className="max-w-sm mx-auto hover:no-underline focus:no-underline transition border-2 hover:scale-105 border-primary hover:border-secondary border-opacity-30 rounded-md p-2"
       >
         <img
           role="presentation"
@@ -31,13 +32,19 @@ const BlogCard = ({ blog, deletable, handleDelete }) => {
           onClick={() => {
             handleDelete(id);
           }}
-          className="absolute bg-primary hover:bg-secondary p-3 rounded-full hover:scale-105 -top-5 -right-5 text-secondary group hover:text-primary cursor-pointer"
+          className="absolute bg-primary hover:bg-secondary p-3 rounded-full hover:scale-105 -top-5 -right-5 text-secondary hover:text-primary cursor-pointer"
         >
           <MdDeleteForever size={20} className=""></MdDeleteForever>
         </div>
       )}
     </div>
   );
+};
+
+BlogCard.propTypes = {
+  blog: PropTypes.object.isRequired,
+  deletable: PropTypes.bool,
+  handleDelete: PropTypes.func,
 };
 
 export default BlogCard;
