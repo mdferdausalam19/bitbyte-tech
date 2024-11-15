@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
+    document.querySelector("html").setAttribute("data-theme", theme);
   }, [theme]);
 
   const handleToggle = (e) => {
@@ -62,6 +61,7 @@ const Navbar = () => {
             onChange={handleToggle}
             type="checkbox"
             className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"
+            checked={theme === "synthwave"}
           />
           <svg
             className="stroke-base-100 fill-base-100 col-start-1 row-start-1"
