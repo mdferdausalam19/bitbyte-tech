@@ -13,6 +13,7 @@
 ## 🔍 Project Overview
 
 **BitByteTech** is a fully responsive web application built with:
+
 - **Vite**
 - **React**
 - **React Router DOM**
@@ -24,15 +25,18 @@ Additional packages include **react-toastify**, **react-icons**, **react-markdow
 ## ✨ Key Features
 
 - **Responsive Navbar**
+
   - Navigation routes for Home, Blogs, and Bookmarks.
   - Theme toggler for switching between dark and light modes.
 
 - **Hero Banner**
+
   - Showcases a title, description, and buttons for navigation.
   - **Read Blogs**: Links to the Blogs page.
   - **Bookmarks**: Links to the Bookmarks page.
 
 - **Blog Page**
+
   - Displays a list of blog cards with images, titles, publish dates, and excerpts fetched from the **Dev.to API**.
   - Clicking a card navigates to a detailed blog page with full content, author details, and a bookmark button.
   - Bookmarking functionality includes toast notifications and prevents duplicate entries.
@@ -44,7 +48,7 @@ Additional packages include **react-toastify**, **react-icons**, **react-markdow
 ## 🛠️ Technologies Used
 
 - **Frameworks & Libraries**:
-  - **Vite**
+
   - **React**
   - **React Router DOM**
   - **Tailwind CSS**
@@ -113,26 +117,31 @@ vite.config.js
 To run the project locally, follow these steps:
 
 ### Prerequisites
+
 Ensure that you have **Node.js** and **npm** installed on your system.
 
 ### Installation
 
 1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/mdferdausalam19/bitbyte-tech.git
    ```
 
 2. **Navigate to the Project Directory**:
+
    ```bash
    cd bitbyte-tech
    ```
 
 3. **Install Dependencies**:
+
    ```bash
    npm install
    ```
 
 4. **Run the Development Server**:
+
    ```bash
    npm run dev
    ```
@@ -143,7 +152,7 @@ Ensure that you have **Node.js** and **npm** installed on your system.
 ## 📚 Resources
 
 - **Frameworks & Libraries**:
-  - [Vite](https://vite.dev/)
+
   - [React](https://react.dev/)
   - [React Router](https://reactrouter.com/)
   - [Tailwind CSS](https://tailwindcss.com/)
